@@ -36,11 +36,10 @@ void loop() {
   float f = dht.readTemperature(true);
   if (isnan(h) || isnan(t) || isnan(f)) {
     //Serial.println("Failed to read from DHT sensor!");
-    //Firebase.setString("smartHome/sensors/dht11/sensor", "Offline");
     return;
   }
   else {
-    //Firebase.setString("smartHome/sensors/dht11/sensor", "Online");
+
   }
 
   temp(t, 0);
